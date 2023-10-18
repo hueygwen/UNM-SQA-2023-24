@@ -1,0 +1,58 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+header {
+    background-color: #10263B;
+    color: white;
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.container.header-container h1 {
+    margin-bottom: 0.85em;
+}
+
+.container.header-container #search-button {
+    background-color: #009BC1;
+}
+
+.container.header-container #search-button:hover {
+    background-color: #792D85;
+    transition: 0.5s;
+}
+
+img {
+    max-width: 100%;
+}
+
+.youtube-title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.video-col, .test-col {
+    padding: 30px;
+}
+
+input {
+    position: relative;
+
+}
+
+@media (max-width: 200px) {
+    input {
+        width: 70%;
+        max-width: 100%;
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover, a:visited {
+    color: #000;
+    text-decoration: none;
+}
