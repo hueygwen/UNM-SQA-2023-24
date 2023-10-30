@@ -1,12 +1,20 @@
+/* Home.html */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
-header {
+#homepage-header {
     background-color: #10263B;
     color: white;
     text-align: center;
     padding: 50px 25px;
+}
+
+.iframe-header {
+    background-color: #10263B;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .container.header-container h1 {
@@ -20,10 +28,12 @@ header {
 .container.header-container #search-button:hover {
     background-color: #792D85;
     transition: 0.5s;
+    transform: scale(110%);
 }
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 .youtube-title {
@@ -37,7 +47,6 @@ img {
 
 input {
     position: relative;
-
 }
 
 @media (max-width: 200px) {
@@ -56,3 +65,45 @@ a:hover, a:visited {
     color: #000;
     text-decoration: none;
 }
+
+/* iFrame.html */
+
+iframe {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.university-logo {
+    padding: 10px;
+    margin: 20px;
+    background-color: #FFF;
+}
+
+@media (max-width: 576px) {
+    .university-logo {
+        aspect-ratio: 255/94;
+        padding: 15px;
+    }
+    
+}
+
+.iframe-header {
+    background-color: #FFF;
+    margin-bottom: 0px;
+}
+
+.iframe-header .university-logo {
+    padding: 10px;
+    margin: 5px;
+}
+
+.home-link {
+    color: #10263B;
+    text-decoration: none;
+}
+
+.home-link:hover, .home-link:visited {
+    color: #10263B;
+    text-decoration: none;
+}
+
