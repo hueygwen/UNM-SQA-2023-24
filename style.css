@@ -79,6 +79,19 @@ iframe {
     background-color: #FFF;
 }
 
+.home-button {
+    text-align: right; 
+    margin: 20px; 
+    padding: 10px;
+}
+
+@media (max-width: 767px) {
+    .home-button {
+        text-align: center;
+        margin: 10px;
+    }
+}
+
 @media (max-width: 576px) {
     .university-logo {
         aspect-ratio: 255/94;

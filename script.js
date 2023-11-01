@@ -13,12 +13,14 @@ fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=
         videoContainer.innerHTML += `
             
             <div class="col-md-4 test-col">
-                <a href="https://www.youtube.com/watch?v=${video.id.videoId}" class="youtube-link" target="_blank">
+                <a href="iFrame.html?videoID=${video.id.videoId}" class="youtube-link">
                 <img src="${video.snippet.thumbnails.high.url}" alt="Youtube Thumbnail">
                 <h5 class="youtube-title">${video.snippet.title}</h5>    
                 <p class="youtube-channel">${video.snippet.channelTitle}</p>
                 </a>
             </div>
         `
+        
+
     }
 })
