@@ -37,10 +37,6 @@ function saveNotesToLocalStorage() {
     console.log(localStorage.getItem("notes"));
 }
 
-function deleteNotes(){
-
-}
-
 function displayNotes() {
     notes.forEach(note => displayNote(note));
 }
