@@ -120,13 +120,45 @@ iframe {
     text-decoration: none;
 }
 
-.notes-container {
-    padding: 10px 20px;
+.notes-section {
+    width: 100%;
+    float: right;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable scrolling if notes list becomes too long */
+    height: 80vh;  /* Adjust this according to your design */
 }
 
-.notes-container textarea {
-    background-color: beige;
+#note-input, #note-timestamp {
     width: 100%;
-    max-width: 100%;
-    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+#notes-list li {
+    list-style-type: none; 
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+/* Delete button styling */
+.delete-note-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for delete button */
+.delete-note-btn:hover {
+    background-color: darkred;
 }
