@@ -24,3 +24,41 @@ fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=
 
     }
 })
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let videoUrl = window.location.search;
+    let urlArray = videoUrl.split('=');
+    let videoID = urlArray[1];
+    console.log(videoID);
+
+    let playVideo = document.querySelector('iframe');
+    playVideo.src = `https://www.youtube.com/embed/${videoID}`;
+
+    // Function to copy the page link to the clipboard
+    function copyPageLinkToClipboard() {
+        const pageLink = window.location.href;
+
+        // Create a temporary input element to hold the page link
+        const tempInput = document.createElement("input");
+        tempInput.value = pageLink;
+        document.body.appendChild(tempInput);
+
+        // Select the input element's content and copy it to the clipboard
+        tempInput.select();
+        document.execCommand("copy");
+
+        // Remove the temporary input element
+        document.body.removeChild(tempInput);
+
+        // Display a notification that the link has been copied
+        alert("Page link copied to clipboard!");
+    }
+
+    // Add an event listener to the "Copy" button
+    const copyLinkBtn = document.getElementById("copy-link-btn");
+    copyLinkBtn.addEventListener("click", copyPageLinkToClipboard);
+});
+
+
