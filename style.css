@@ -120,7 +120,7 @@ iframe {
     text-decoration: none;
 }
 
-.notes-section {
+.notes-and-suggestion-section {
     width: 100%;
     float: right;
     border-left: 1px solid #ccc;
@@ -130,19 +130,39 @@ iframe {
     height: 80vh;  /* Adjust this according to your design */
 }
 
+.suggest-video-row {
+    margin-bottom: 0.8rem;
+}
+
 #note-input, #note-timestamp {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
+    background-color: #fdf8c8;
+}
+
+#note-input {
+    height: 20vh;
+}
+
+#note-input::placeholder {
+    transform: translateY(-50px);
 }
 
 #notes-list li {
     list-style-type: none; 
+    margin-top: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
     position: relative;
+}
+
+#add-note-btn, #copy-link-btn {
+    background-color: #10263B;
+    color: #FFF;
+    border: 3px solid#10263B;
 }
 
 /* Delete button styling */
@@ -161,4 +181,30 @@ iframe {
 /* Hover effect for delete button */
 .delete-note-btn:hover {
     background-color: darkred;
+}
+
+@media (max-width: 768px) {
+    .notes-section {
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media (min-width: 994px) and (max-width: 1180px) {
+    .suggest-title {
+        font-size: 1rem;
+    }
+    
+    .suggest-channel {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 993px) {
+    .suggest-title {
+        font-size: 0.7rem;
+    }
+    
+    .suggest-channel {
+        font-size: 0.7rem;
+    }
 }
