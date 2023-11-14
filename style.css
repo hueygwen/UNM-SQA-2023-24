@@ -142,14 +142,6 @@ iframe {
     background-color: #fdf8c8;
 }
 
-#note-input {
-    height: 20vh;
-}
-
-#note-input::placeholder {
-    transform: translateY(-50px);
-}
-
 #notes-list li {
     list-style-type: none; 
     margin-top: 15px;
