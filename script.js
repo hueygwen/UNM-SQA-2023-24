@@ -97,11 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Page link copied to clipboard!");
     }
 
-    // Add an event listener to the "Copy" button
-    /* const copyLinkBtn = document.getElementById("copy-link-btn");
-    copyLinkBtn.addEventListener("click", copyPageLinkToClipboard); */
-
-
 });
 
 
@@ -142,14 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
         window.open(telegramLink, "Telegram Share", "width=600,height=400");
     }
 
-    // Function to share the page link on Facebook
-    function sharePageLinkOnFacebook() {
-        const pageLink = window.location.href;
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageLink)}`, "Facebook Share", "width=600,height=400");
-    }
-
-
-
 
 
     const shareLinkBtn = document.getElementById("share-link-btn");
@@ -175,18 +162,12 @@ document.addEventListener("DOMContentLoaded", function () {
         shareModal.style.display = "none";
     });
 
-    // Add event listeners to the share buttons
-    const copyLinkBtn = document.getElementById("copy-link-btn");
-    copyLinkBtn.addEventListener("click", copyPageLinkToClipboard);
 
+    // Add event listeners to the share buttons
     const whatsappShareBtn = document.getElementById("whatsapp-share-btn");
     whatsappShareBtn.addEventListener("click", sharePageLinkOnWhatsApp);
 
-
     const telegramShareBtn = document.getElementById("telegram-share-btn"); // Add this line
     telegramShareBtn.addEventListener("click", sharePageLinkOnTelegram); 
-
-    const facebookShareBtn = document.getElementById("facebook-share-btn");
-    facebookShareBtn.addEventListener("click", sharePageLinkOnFacebook);
 
 });
