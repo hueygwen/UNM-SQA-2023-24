@@ -266,3 +266,31 @@ iframe {
     background-color: #213C64;
     border-color: #213C64;
 }
+
+/* Additional CSS for keyword container */
+.keyword-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.keyword {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #009BC1;
+    color: #fff;
+    cursor: pointer;
+}
+
+.keyword {
+    display: inline-block; /* Display keywords in a horizontal line */
+    margin: 20px; /* Add spacing between keywords */
+    padding: 5px 10px; /* Add padding to make keywords clickable */
+    background-color: #009BC1; /* Set a background color */
+    color: #fff; /* Set text color */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.keyword:hover {
+    background-color: #792D85; /* Change background color on hover */
+    transition: 0.3s; /* Add a smooth transition effect */
+}

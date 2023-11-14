@@ -25,6 +25,17 @@
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="Search for videos">
                 <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div id="keywords">
+                    <label class="keyword" data-selected="false">Software</label>
+                    <label class="keyword" data-selected="false">Testing</label>
+                    <label class="keyword" data-selected="false">Quality</label>
+                    <label class="keyword" data-selected="false">Assurance</label>
+                </div>
+                <div id="search-tags" class="keyword-container"></div>
+                <!-- New input field for custom keywords -->
+                <input type="text" id="custom-keyword-input" placeholder="Enter custom keyword">
+                <!-- Button for custom keyword search -->
+                <button id="custom-keyword-search-button">Add Custom Keyword</button>
             </div>
         </div>
     </header>
