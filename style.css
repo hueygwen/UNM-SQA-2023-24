@@ -159,10 +159,17 @@ iframe {
     position: relative;
 }
 
-#add-note-btn, #copy-link-btn {
+#add-note-btn, #share-link-btn {
     background-color: #10263B;
     color: #FFF;
     border: 3px solid#10263B;
+}
+
+
+#add-note-btn:hover, #share-link-btn:hover {
+    background-color: #213C64;
+    color: #FFF;
+    border: 3px solid#213C64;
 }
 
 /* Delete button styling */
@@ -207,4 +214,63 @@ iframe {
     .suggest-channel {
         font-size: 0.7rem;
     }
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #FFF; /* White background for the content */
+  width: 60%; /* Set the width to 70% of the screen */
+  margin: 15% auto; /* Center the modal vertically and horizontally */
+  padding: 20px; /* Add padding to the content as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+
+
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  /* Add the following to explicitly set it to the right */
+  position: absolute;
+  right: 20px; 
+
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Share buttons */
+.share-btn {
+    width: 50%;
+    padding: 10px; /* You can adjust padding as needed */
+    margin: 10px auto; /* Center the button horizontally with top and bottom margin */
+    display: block; /* Ensure the button is displayed as a block element */
+    background-color: #10263B;
+    color: #FFF;
+    border: 2px solid #10263B;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.share-btn:hover {
+    background-color: #213C64;
+    border-color: #213C64;
 }

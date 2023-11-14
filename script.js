@@ -105,3 +105,88 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    let videoUrl = window.location.search;
+    let urlArray = videoUrl.split('=');
+    let videoID = urlArray[1];
+    console.log(videoID);
+
+    let playVideo = document.querySelector('iframe');
+    playVideo.src = `https://www.youtube.com/embed/${videoID}`;
+
+    // Function to copy the page link to the clipboard
+    function copyPageLinkToClipboard() {
+        const pageLink = window.location.href;
+        const tempInput = document.createElement("input");
+        tempInput.value = pageLink;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        alert("Page link copied to clipboard!");
+    }
+
+    // Function to share the page link on WhatsApp
+    function sharePageLinkOnWhatsApp() {
+        const pageLink = window.location.href;
+        const whatsappLink = `whatsapp://send?text=${encodeURIComponent(pageLink)}`;
+        window.location.href = whatsappLink;
+    }
+
+
+    // Function to share the page link on Telegram
+    function sharePageLinkOnTelegram() {
+        const pageLink = window.location.href;
+        const telegramLink = `https://t.me/share/url?url=${encodeURIComponent(pageLink)}`;
+        window.open(telegramLink, "Telegram Share", "width=600,height=400");
+    }
+
+    // Function to share the page link on Facebook
+    function sharePageLinkOnFacebook() {
+        const pageLink = window.location.href;
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageLink)}`, "Facebook Share", "width=600,height=400");
+    }
+
+
+
+
+
+    const shareLinkBtn = document.getElementById("share-link-btn");
+    const shareModal = document.getElementById("share-modal");
+
+    // Show the share modal when the "Share Link" button is clicked
+    shareLinkBtn.addEventListener("click", function () {
+        shareModal.style.display = "block";
+    });
+
+    // Hide the share modal when any button inside the modal is clicked
+    const modalButtons = document.querySelectorAll("#share-modal button");
+    modalButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            shareModal.style.display = "none";
+        });
+    });
+
+
+    // Hide the share modal when the close button is clicked
+    const closeModalBtn = document.getElementById("close-modal-btn");
+    closeModalBtn.addEventListener("click", function () {
+        shareModal.style.display = "none";
+    });
+
+    // Add event listeners to the share buttons
+    const copyLinkBtn = document.getElementById("copy-link-btn");
+    copyLinkBtn.addEventListener("click", copyPageLinkToClipboard);
+
+    const whatsappShareBtn = document.getElementById("whatsapp-share-btn");
+    whatsappShareBtn.addEventListener("click", sharePageLinkOnWhatsApp);
+
+
+    const telegramShareBtn = document.getElementById("telegram-share-btn"); // Add this line
+    telegramShareBtn.addEventListener("click", sharePageLinkOnTelegram); 
+
+    const facebookShareBtn = document.getElementById("facebook-share-btn");
+    facebookShareBtn.addEventListener("click", sharePageLinkOnFacebook);
+
+});
