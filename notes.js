@@ -127,3 +127,60 @@ function displayNote(note) {
 }
 
 displayNotes();
+
+
+// Downloading notes as txt 
+document.getElementById("download-notes-btn").addEventListener("click", function () {
+    // Get the current video ID
+    const currentVideoId = getVideoIdFromUrl();
+    // Call the function to handle the download with the video ID
+    downloadNotes(currentVideoId);
+});
+
+
+function getYouTubeVideoUrl(videoId) {
+    return `https://www.youtube.com/watch?v=${videoId}`;
+}
+
+
+function downloadNotes(videoId) {
+    const notesText = generateNotesText();
+    const videoUrl = getYouTubeVideoUrl(videoId);
+
+    // Create a combined content with video URL and notes
+    const combinedContent = `${videoUrl}\n\n${notesText}`;
+
+    // Pass the video ID as part of the file name
+    const fileName = `notes_${videoId}.txt`;
+
+    downloadFile(combinedContent, fileName, "text/plain");
+}
+
+
+
+function generateNotesText() {
+    // Iterate through notes and format them as needed
+    let formattedNotes = notes.map(note => `[${note.timestamp}] - ${note.text}`).join('\n');
+    return formattedNotes;
+}
+
+
+function downloadFile(content, fileName, contentType) {
+    const blob = new Blob([content], { type: contentType });
+
+    const a = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    a.href = url;
+    // Include the file name in the link's download attribute
+    a.download = fileName;
+
+    document.body.appendChild(a);
+    a.click();
+
+    // Cleanup
+    setTimeout(() => {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }, 0);
+}
+

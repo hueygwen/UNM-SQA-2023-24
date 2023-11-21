@@ -151,14 +151,14 @@ iframe {
     position: relative;
 }
 
-#add-note-btn, #share-link-btn {
+#add-note-btn, #download-notes-btn {
     background-color: #10263B;
     color: #FFF;
     border: 3px solid#10263B;
 }
 
 
-#add-note-btn:hover, #share-link-btn:hover {
+#add-note-btn:hover, #download-notes-btn:hover {
     background-color: #213C64;
     color: #FFF;
     border: 3px solid#213C64;
