@@ -29,7 +29,7 @@ fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=
         }
 
     } else if (pageName.includes("iFrame.html")) {
-        let checkVideoUrl = document.querySelector("iframe")
+        let checkVideoUrl = document.querySelector("div")
         let videoUrl = checkVideoUrl.src
         let checkVideoID = videoUrl.split("/")
         let videoID = checkVideoID[checkVideoID.length - 1]
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let videoID = urlArray[1];
     console.log(videoID);
 
-    let playVideo = document.querySelector('iframe');
+    let playVideo = document.querySelector('div');
     playVideo.src = `https://www.youtube.com/embed/${videoID}`;
 
     document.getElementById("copy-link-btn").onclick = function() {copyPageLinkToClipboard()};
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let videoID = urlArray[1];
     console.log(videoID);
 
-    let playVideo = document.querySelector('iframe');
+    let playVideo = document.querySelector('div');
     playVideo.src = `https://www.youtube.com/embed/${videoID}`;
 
     // Function to copy the page link to the clipboard
