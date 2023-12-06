@@ -31,7 +31,7 @@ fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=
 
     } else if (pageName.includes("iFrame.html")) {
         
-        let checkVideoUrl = document.querySelector("div")
+        let checkVideoUrl = document.querySelector("#player")
         let videoUrl = checkVideoUrl.src
         let checkVideoID = videoUrl.split("/")
         let videoID = checkVideoID[checkVideoID.length - 1]
