@@ -34,7 +34,7 @@ fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=
         let checkVideoUrl = document.getElementById("player")
         let videoUrl = checkVideoUrl.src
         let checkVideoID = videoUrl.split("/")
-		let extractVideoID = checkVideoID[checkVideoID.length-1].split("?")
+	let extractVideoID = checkVideoID[checkVideoID.length-1].split("?")
         let videoID = extractVideoID[0]
 
         console.log(videoID)
