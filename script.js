@@ -1,4 +1,4 @@
-fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&q=Software%20Quality%20Assurance&type=video&videoDuration=short&key=AIzaSyDmO585M5o_4mkNsLE6A4r8Eya4wYj0hok")
+fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&q=Software%20Quality%20Assurance&type=video&videoDuration=short&key=AIzaSyA_ek8hpt8f8l7laOmDGYb4HC2ZSv_1Nc0")
 .then((response) => {
     return response.json();
 })
